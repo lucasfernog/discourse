@@ -29,6 +29,11 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+      - name: install Rust stable
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
       - name: Install Tauri CLI
         run: cargo install tauri-cli --git https://github.com/tauri-apps/tauri --branch next
       - name: Build
