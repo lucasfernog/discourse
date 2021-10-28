@@ -30,7 +30,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Install Tauri CLI
-      - run: cargo install tauri-cli --git https://github.com/tauri-apps/tauri --branch next
+        run: cargo install tauri-cli --git https://github.com/tauri-apps/tauri --branch next
       - name: Build
         run: cargo tauri build
       - name: Upload binaries to release
