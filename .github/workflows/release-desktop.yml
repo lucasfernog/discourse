@@ -30,12 +30,15 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y webkit2gtk-4.0 libappindicator3-dev librsvg2-dev patchelf xvfb
+    - name: Install Tauri CLI
+      run: cargo install tauri-cli --git https://github.com/tauri-apps/tauri --branch next
     - name: install dependencies
       run: yarn
     - uses: tauri-apps/tauri-action@v0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
+        tauriScript: "cargo tauri"
         tagName: v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
         releaseName: "Discourse v__VERSION__"
         releaseBody: "See the assets to download this version and install."
