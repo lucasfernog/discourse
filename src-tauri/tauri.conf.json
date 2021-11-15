@@ -4,8 +4,8 @@
     "version": "0.1.1"
   },
   "build": {
-    "distDir": ["public/index.html"],
-    "devPath": ["public/dev/index.html"],
+    "distDir": "https://try.discourse.org",
+    "devPath": "http://localhost:4200",
     "beforeDevCommand": "",
     "beforeBuildCommand": ""
   },
