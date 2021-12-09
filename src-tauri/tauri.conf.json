@@ -52,7 +52,10 @@
       "active": false
     },
     "allowlist": {
-      "all": true
+      "all": false,
+      "notification": {
+        "all": true
+      }
     },
     "windows": [
       {
