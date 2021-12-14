@@ -14,7 +14,7 @@ tauri-build = { git = "https://github.com/tauri-apps/tauri/", branch = "next" }
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { git = "https://github.com/tauri-apps/tauri/", branch = "next", features = ["notification-all", "system-tray"] }
+tauri = { git = "https://github.com/tauri-apps/tauri/", branch = "next", features = ["notification-all", "shell-open", "system-tray"] }
 
 [features]
 default = [ "custom-protocol" ]
